@@ -4,9 +4,12 @@ services:
   pelican:
     build:
       context: ./pelican
+    working_dir: /usr/src/app/volumes/pelican/output
     command: python -m pelican.server
     volumes:
-     - ../volumes/pelican:/usr/src/app
+      - ../:/usr/src/app
+      - $GITHUB_SSH_PRIVATE_KEY/:/home/root/.ssh/id_rsa
+      - $GITHUB_SSH_PUBLIC_KEY/:/home/root/.ssh/id_rsa.pub
     ports:
       - "8000:8000"
 
