@@ -1,0 +1,7 @@
+source 'https://rubygems.org'
+
+# Gemfile
+group :development do
+  gem 'guard', '~> 2.14'
+  gem 'guard-shell'
+end

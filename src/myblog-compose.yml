@@ -1,0 +1,25 @@
+version: "3"
+
+services:
+  pelican:
+    #image: alxndrpsclt/pelican
+    build:
+      context: ./pelican
+    command: python -m pelican.server
+    volumes:
+     - ../volumes/pelican:/usr/src/app
+       #- /home/alex/Documents/creations/prog/persblog/docker/volumes/pelican:/usr/src/app
+    ports:
+      - "8000:8000"
+        #networks:
+        #- front-tier
+        #- back-tier
+
+  guard:
+    build: guard/
+    volumes:
+     - ../volumes/pelican:/usr/src/app
+    environment:
+      - RAILS_ENV=development
+    #entrypoint: ["tail", "-f", "/dev/null"]
+    command: bundle exec guard --no-bundler-warning --no-interactions

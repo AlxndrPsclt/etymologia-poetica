@@ -1,0 +1,11 @@
++ add favicons
++ remove or fix the atom feed
++ remove or fix tags
++ add transitions between main view and article page
++ check the problem of changing size banner between main page and article page
++ check the "bug" of flashin "etymologia poetica" on page change
++ make MANGLE_EMAILS work
++ remove or fix Google Analytics
++ Make guard work or delete it
+
+
