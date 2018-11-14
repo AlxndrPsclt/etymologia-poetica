@@ -6,6 +6,5 @@
 + check the "bug" of flashin "etymologia poetica" on page change
 + make MANGLE_EMAILS work
 + remove or fix Google Analytics
-+ Make guard work or delete it
-
-
++ make guard work or delete it
++ prepare docker-compose for different cases: dev; pushing to prod

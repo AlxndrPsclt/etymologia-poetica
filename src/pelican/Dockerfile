@@ -14,4 +14,7 @@ ENV LC_ALL fr_FR.utf-8
 
 COPY ssh_config /root/.ssh/config
 
+RUN mkdir -p /usr/src/init
+COPY pelican-entrypoint.sh /usr/src/init/
+
 CMD ["python", "-m", "pelican.server", "-v"]
