@@ -8,8 +8,8 @@ services:
     command: python -m pelican.server
     volumes:
       - ../:/usr/src/app
-      - $GITHUB_SSH_PRIVATE_KEY/:/home/root/.ssh/id_rsa
-      - $GITHUB_SSH_PUBLIC_KEY/:/home/root/.ssh/id_rsa.pub
+      - $GITHUB_SSH_PRIVATE_KEY/:/root/.ssh/id_rsa
+      - $GITHUB_SSH_PUBLIC_KEY/:/root/.ssh/id_rsa.pub
     ports:
       - "8000:8000"
 
